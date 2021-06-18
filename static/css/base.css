@@ -1,0 +1,25 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/balance.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: rgb(20, 19, 19);
+    font-family: 'Montserrat', sans-serif;
+    height: calc(100vh - 164px);
+}
+
+.nav-choice {
+    color: rgb(165, 12, 12)
+}
+
+.home-nav-padding .main-text h1 {
+    padding-top: 200px;
+    color: #fff;
+}
+
+.home-nav-padding .main-text h2 {
+    padding-top: 20px;
+    color: #fff;
+}
