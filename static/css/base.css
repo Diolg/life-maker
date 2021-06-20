@@ -11,8 +11,36 @@ body {
 }
 
 .nav-choice {
-    color: rgb(165, 12, 12)
+    color: rgb(233, 15, 15)
 }
+.nav-logo {
+    color: #fff;
+}
+
+#account {
+    color: #fff;
+}
+
+#cart {
+    color: #fff;
+}
+
+#mobile-search {
+     color: #fff;
+}
+
+.fa-search {
+    color: rgb(233, 15, 15)!important
+}
+
+.fa-search:hover {
+    color: #fff!important;
+}
+
+.btn .form-control {
+    color: rgb(233, 15, 15)!important;
+}
+
 
 .home-nav-padding .main-text h1 {
     padding-top: 200px;
@@ -22,4 +50,41 @@ body {
 .home-nav-padding .main-text h2 {
     padding-top: 20px;
     color: #fff;
+}
+
+.search-button:hover {
+    background-color: rgb(165, 12, 12);
+}
+
+span.icon {
+    color: rgb(0, 0, 0) !important;
+}
+
+span.icon:hover {
+    color:#fff !important;
+}
+
+.navbar.navbar-expand-lg.navbar-light {
+    background-color:#343A40;
+}
+
+#all-products-link,#lifestyle-link,#health-link,#career-link {
+    color:rgb(233, 15, 15);
+}
+
+#all-products-link:hover {
+    color:#fff;
+}
+#lifestyle-link:hover {
+    color:#fff;
+}
+#health-link:hover {
+    color:#fff;
+}
+#career-link:hover {
+    color:#fff;
+}
+
+.btn-danger {
+    background-color:rgb(233, 15, 15)!important;
 }
