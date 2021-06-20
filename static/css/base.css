@@ -8,6 +8,11 @@ body {
     color: rgb(20, 19, 19);
     font-family: 'Montserrat', sans-serif;
     height: calc(100vh - 164px);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    flex: 1 0 auto;
+	
 }
 
 .nav-choice {
@@ -22,6 +27,10 @@ body {
 }
 
 #cart {
+    color: #fff;
+}
+
+#blog {
     color: #fff;
 }
 
@@ -87,4 +96,17 @@ span.icon:hover {
 
 .btn-danger {
     background-color:rgb(233, 15, 15)!important;
+}
+
+
+
+
+
+/*-----Footer-----*/
+
+.page-footer {
+	padding: 30px;
+	flex-grow: 0;
+    background-color: #141313;
+    
 }
