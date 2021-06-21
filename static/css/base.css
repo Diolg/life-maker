@@ -103,8 +103,47 @@ span.icon:hover {
 }
 
 
+/*-----All sessions page-----*/
 
+.sessions-text {
+    padding-top: 200px;
+    color: #fff;
+}
+.sessions-container {
+    padding-top: 50px;
+}
 
+.card-body {
+    background-color: #343A40;
+    padding-bottom: 10px;
+}
+
+.card {
+    min-height: 480px;
+    background-color: #343A40;
+    
+}
+
+.card-body p {
+    color: #fff;
+}
+.card-img, .card-img-top {
+    min-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    align-items: center;
+
+}
+
+/*-----Session details----*/
+
+#session-about, #session-name, #session-price {
+    color: #fff;
+}
+
+.text-muted {
+    color: #fff!important;
+}
 
 /*-----Footer-----*/
 
@@ -113,4 +152,16 @@ span.icon:hover {
 	flex-grow: 0;
     background-color: #141313;
     
+}
+
+#copyright {
+    color:#fff;
+}
+
+.footer i {
+    color:rgb(194, 4, 4);      
+}
+
+.footer i:hover {
+    color: #fff;
 }
