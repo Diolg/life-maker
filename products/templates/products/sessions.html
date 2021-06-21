@@ -3,18 +3,53 @@
 
 {% block page_header %}
 <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+    <div class="row">
+        <div class="col"></div>
+    </div>
 </div>
 {% endblock %}
 
 {% block content %}
-<div class="container">
-        <div class="row">
-            <div class="col">
-                {{ products }}
+<div class="sessions-text text-center">
+    <h2 class="center-align">Here you find all our sessions topics</h2>
+    <h2>Choose a session with our coaches and change your life!</h2>
+</div>
+
+<div class="row">
+            <div class="product-container col-12 ">
+                <div class="row mt-1 mb-2"></div>
+                <!-- product cards -->
+                <div class="row">
+                    {% for product in products %}
+                        <div class="col-12 col-md-4 col-lg-4 card">
+                                {% if product.image %}
+                                <a href="{% url 'session_detail' product.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                </a>
+                                {% else %}
+                                <a href="{% url 'session_detail' product.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                </a>
+                                {% endif %}
+                                <div class="card-body">
+                                    <p class="mb-0 text-uppercase font-weight-bold">{{ product.name }}</p>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+
+                                        <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                        
+                                            {% if product.rating %}
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} /5</small>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
-</div>
+    </div>
 {% endblock %}

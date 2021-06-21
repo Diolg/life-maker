@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="sessions-text text-center">
+    <h2 class="center-align">Good choice!</h2>
+    <h2>Now you are a step closer to change your life!</h2>
+</div>
+
+
+                <!-- session description--->
+            <div class="container-fluid">
+                <div class="row">
+                        <div class="col-12 col-md-4 col-lg-4">
+                            <div class="image-container my-5">
+                                {% if product.image %}
+                                <a href="{{ product.image.url }}">
+                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                </a>
+                                {% else %}
+                                <a href=" ">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-4">
+                         <div class="session-description-container mb-5 mt-md-5">
+                             <p id="session-name" class="mb-0 text-uppercase font-weight-bold">{{ product.name }}</p>
+                             <p id="session-price" class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                             {% if product.rating %}
+                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} /5</small>
+                             {% endif %}
+                             <p id="session-about" class="mt-3">{{ product.description }}</p>
+                        </div>
+                </div>
+            </div>
+        {% endblock %}
+
+
+
+
+
+                                
+                                
+
+
+
+
+
+                               
