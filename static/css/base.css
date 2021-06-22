@@ -135,6 +135,10 @@ span.icon:hover {
 
 }
 
+.details {
+    color: rgb(15, 15, 15)!important;
+}
+
 /*-----Session details----*/
 
 #session-about, #session-name, #session-price {
