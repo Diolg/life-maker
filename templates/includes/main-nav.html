@@ -17,8 +17,8 @@
                 Life Style
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="lifestyle-link">
-                <a href="" class="dropdown-item">Relationships</a>
-                <a href="" class="dropdown-item">Awareness development</a>
+                <a href="{% url 'products' %}?category=relationships" class="dropdown-item">Relationships</a>
+                <a href="{% url 'products' %}?category=awareness" class="dropdown-item">Awareness development</a>
             </div>
         </li>
 
@@ -27,8 +27,8 @@
                 Health
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="health-link">
-                <a href="" class="dropdown-item">Mental health</a>
-                <a href="" class="dropdown-item">Sports</a>
+                <a href="{% url 'products' %}?category=mental_health" class="dropdown-item">Mental health</a>
+                <a href="{% url 'products' %}?category=sport" class="dropdown-item">Sports</a>
             </div>
         </li>
 
@@ -37,8 +37,8 @@
                 Career
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="career-link">
-                <a href="" class="dropdown-item">Creating CV</a>
-                <a href="" class="dropdown-item">Creating personal letter</a>
+                <a href="{% url 'products' %}?category=creating_cv" class="dropdown-item">Creating CV</a>
+                <a href="{% url 'products' %}?category=personal_letter" class="dropdown-item">Creating personal letter</a>
             </div>
         </li>
     </ul>
