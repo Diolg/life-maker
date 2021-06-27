@@ -46,11 +46,11 @@
             {% endif %}
         </div>
     </li>
-    <!--Shopping Cart-->
+    <!--Shopping Bag-->
     <li class="list-inline-item">
-        <a id="cart"
+        <a id="shopping-bag"
             class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
-            href="">
+            href="{% url 'shopping_bag' %}">
             <div class="text-center">
                 <div><i class="fas fa-shopping-cart fa-lg"></i></div>
                 <p class="my-0">

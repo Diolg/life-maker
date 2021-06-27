@@ -51,9 +51,40 @@
                                     </div>
                                 </div>
                         </div>
+                       
                     {% endfor %}
                 </div>
             </div>
         </div>
+         <!-- Move to top button -->
+
+<div>
+    <button class="fas fa-arrow-circle-up" id="buttonUp"></button>
+</div>
     </div>
+    
+    
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+    document.getElementById("buttonUp").onclick = function scrollUpFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    window.onscroll = function() {scrollFunction()}
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+            document.getElementById("buttonUp").style.display = "block";     
+        }
+        else {
+            document.getElementById("buttonUp").style.display = "none";
+        }
+
+    }
+		
+	</script>
 {% endblock %}
