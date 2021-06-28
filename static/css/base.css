@@ -183,9 +183,10 @@ a .upbtn-link {
      color: #fff;
 }
 
-.arrow-left {
+.arrow-left, .fa-lock {
     color:rgb(233, 15, 15);
 }
+
 
 .arrow-left:hover {
     color:#fff;
@@ -196,8 +197,21 @@ a .upbtn-link {
     color: #fff;
 }
 
+
 #keep-shopping {
     margin-top: 5px;
+}
+
+.fa-shopping-cart, .bag-text {
+    color: #fff;
+}
+
+#bag-total {
+    color:#fff; 
+}
+
+.checkout, .text-primary, .text-info {
+    color: #fff!important;
 }
 
 .add-shopping {
@@ -207,11 +221,18 @@ a .upbtn-link {
 }
 
 
+.bag-buttons {
+      text-align: center;
+}
+
+
+
 
 /*-----Footer-----*/
 
 .page-footer {
-	padding: 30px;
+    padding: 15px;
+    line-height: 1.5em;
 	flex-grow: 0;
     background-color: #141313;
     
