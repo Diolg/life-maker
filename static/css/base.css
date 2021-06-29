@@ -225,6 +225,10 @@ a .upbtn-link {
       text-align: center;
 }
 
+.update,
+.remove {
+    cursor: pointer;
+}
 
 
 
