@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -51,61 +52,95 @@
         </div>
 
 
-        <div class="col-12 col-md-3 my-auto text-center">
-            <p class="bag-text">{{ item.quantity }}</p>
+        <div class="col-12 col-md-3 justify-content-center">
+            <form class="form update-sessions" method="POST" action="{% url 'edit_bag' item.item_id %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <div class="row">
+                        <div class="mt-4 input-group col-8 offset-2">
+                            <div class="input-group-prepend">
+                                <button class="decrement-qty btn" data-item_id="{{ item.item_id }}"
+                                    id="decrement-qty_{{ item.item_id }}">
+                                    <span>
+                                        <i class="fas fa-minus fa-sm"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <input class="form-control form-control-sm qty_input" type="number" name="quantity"
+                                value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}"
+                                id="id_qty_{{ item.item_id }}">
+                            <div class="input-group-append">
+                                <button class="increment-qty btn" data-item_id="{{ item.item_id }}"
+                                    id="increment-qty_{{ item.item_id }}">
+                                    <span>
+                                        <i class="fas fa-plus fa-sm"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+            </form>
+
+  <!--Edit/Remove items from bag options-->      
+            <div class="row pt-3">
+                <div class="col-4 offset-2 text-center">
+                    <a class="update btns">Edit</a>
+                </div>
+                <div class="col-4 text-center">
+                    <a class="remove btns" id="remove_{{ item.item_id }}">Remove</a>
+                </div>
+            </div>
         </div>
 
-        <div class="col-12 col-md-3 my-auto text-center">
-            <p class="bag-text d-none d-md-block">${{ item.product.price }}</p>
-        </div>
-
-        <div class="col-12 col-md-3 my-auto text-center">
-            <p class="bag-text">${{ item.product.price }}</p>
-        </div>
-        {% endfor %}
-        <hr>
-
-
-        <div class="col-12 col-md-12 my-auto text-center">
-            <p><strong id="bag-total">Bag Total: ${{ total|floatformat:2 }}</strong></p>
-        </div>
     </div>
 
-
-
-    <div class="bag-buttons row text-center justify-content-center text-center">
-        <div class="col-12 col-md-12 pt-4 pb-4 text-center">
-            <a href="{% url 'products' %}" class="btn btn-outline-secondary btn-lg shadow keep-shopping text-center">
-                <span class="icon">
-                    <i class="fas fa-chevron-left arrow-left"></i>
-                </span>
-                <span class="text-uppercase">Keep Shopping</span>
-            </a>
-            <a href="" class="btn btn-outline-secondary btn-lg shadow text-center">
-                <span class="text-uppercase checkout">Secure Checkout</span>
-                <span class="icon checkout">
-                    <i class="fas fa-lock"></i>
-                </span>
-            </a>
-
-        </div>
+    <div class="col-12 col-md-3 my-auto text-center">
+        <p class="bag-text d-none d-md-block">${{ item.product.price }}</p>
     </div>
 
+    <div class="col-12 col-md-3 my-auto text-center">
+        <p class="bag-text">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+    </div>
+    {% endfor %}
+    <hr>
+
+
+    <div class="col-12 col-md-12 my-auto text-center">
+        <p><strong id="bag-total">Bag Total: ${{ grand_total|floatformat:2 }}</strong></p>
+    </div>
+</div>
 
 
 
+<div class="bag-buttons row text-center justify-content-center text-center">
+    <div class="col-12 col-md-12 pt-4 pb-4 text-center">
+        <a href="{% url 'products' %}" class="btn btn-outline-secondary btn-lg shadow keep-shopping text-center">
+            <span class="icon">
+                <i class="fas fa-chevron-left arrow-left"></i>
+            </span>
+            <span class="text-uppercase">Keep Shopping</span>
+        </a>
+        <a href="" class="btn btn-outline-secondary btn-lg shadow text-center">
+            <span class="text-uppercase checkout">Secure Checkout</span>
+            <span class="icon checkout">
+                <i class="fas fa-lock"></i>
+            </span>
+        </a>
 
-    {% else %}
+    </div>
+</div>
 
-    <h2 class="mb-5 empty">This bag is empty</h2>
-    <a href="{% url 'products' %}" class="btn btn-outline-secondary btn-lg keep-shopping shadow">
-        <span class="icon">
-            <i class="fas fa-chevron-left arrow-left"></i>
-        </span>
-        <span class="text-uppercase">Keep Shopping</span>
-    </a>
+{% else %}
 
-    {% endif %}
+<h2 class="mb-5 empty">This bag is empty</h2>
+<a href="{% url 'products' %}" class="btn btn-outline-secondary btn-lg keep-shopping shadow">
+    <span class="icon">
+        <i class="fas fa-chevron-left arrow-left"></i>
+    </span>
+    <span class="text-uppercase">Keep Shopping</span>
+</a>
+
+{% endif %}
 
 </div>
 
@@ -113,4 +148,31 @@
 </div>
 
 
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input.html' %}
+
+<script type="text/javascript">
+// Update quantity on click
+$('.update').click(function(e) {
+        var form = $(this).prev('.update-sessions');
+        form.submit();
+    })
+// Remove item and reload on click
+    $('.remove').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
+        console.log(csrfToken)
+
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
 {% endblock %}
