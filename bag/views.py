@@ -33,9 +33,9 @@ def add_to_bag(request, item_id):
 
 
 def edit_bag(request, item_id):
-    """ Edit quantity of sprecified session to the selected amount """
+    """ Edit quantity of specified session to the selected amount """
 
-    product = get_object_or_404(Product,pk=item_id)
+    product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
 
