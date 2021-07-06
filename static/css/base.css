@@ -266,6 +266,12 @@ a .upbtn-link {
     margin-bottom: 0.1rem!important;
 }
 
+/*--Checkout success--*/
+
+.confirmation-message {
+    margin-top: 170px;
+}
+
 
 /*------Blog-----*/
 
