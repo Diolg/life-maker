@@ -36,6 +36,18 @@
     border: 1px solid #000;
 }
 
+select,
+select option {
+    color: #0000;
+}
+
+select:invalid,
+select option[value=""]
+{
+    color: #aab7c4 !important;
+}
+
+
 .checkout-edit-complete {
     display:inline-block;
     padding: 10px;
