@@ -254,6 +254,10 @@ a .upbtn-link {
     overflow-y: auto;
 }
 
+.text-toast {
+    color:#000 !important;
+}
+
 /*-----Checkout-----*/
 
 .checkout-edit-complete {
@@ -351,6 +355,7 @@ a .upbtn-link {
     line-height: 1.5em;
 	flex-grow: 0;
     background-color: #141313;
+    margin-top: 10px;
     
 }
 
