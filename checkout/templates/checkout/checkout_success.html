@@ -112,6 +112,13 @@
                 </div>
             </div>
         </div>
+        <div class="col-12 text-center">
+            {% if from_profile %}
+            <a href="{% url 'profile' %}" class="btns mt-3 mb-3">Back to Profile <i class="fas fa-arrow-left"></i></a>
+            {% else %}
+            <a class="btns mt-3 mb-3" href="{% url 'products' %}">Return to shop <i class="fas fa-arrow-left"></i></a>
+            {% endif %}
+        </div>
         
     </div>
 {% endblock %}
