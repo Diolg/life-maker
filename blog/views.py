@@ -1,15 +1,16 @@
 from django.shortcuts import render, redirect
-
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 from .forms import CommentForm
 from .models import Post
 
-# Create your views here.
+
 def blog(request):
     posts = Post.objects.all()
    
     return render(request, 'blog/blog.html', {'posts': posts})
 
+@login_required
 def post_detail(request, slug):
     post = Post.objects.get(slug=slug)
 
