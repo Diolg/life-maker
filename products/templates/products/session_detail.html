@@ -45,6 +45,13 @@
                 {% if product.rating %}
                 <small class="details"><i class="fas fa-star mr-1"></i>{{ product.rating }} /5</small>
                 {% endif %}
+                
+                {% if request.user.is_superuser %}
+                                                <small class="ml-3">
+                                                    <a href="{% url 'edit_product' product.id %}">Edit</a>
+                                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                </small>
+                                            {% endif %}
                 <p id="session-about" class="mt-3">{{ product.description }}</p>
 
                 <!--Form to choose the quantity-->
