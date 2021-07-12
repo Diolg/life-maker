@@ -1,0 +1,20 @@
+Dear {{ order.full_name }},
+
+Here is just a confirmation of the important step you have just made.
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: ${{ order.order_total }}
+Order Grand Total: ${{ order.grand_total }}
+
+You will receive an email from Coach to {{ order.email }} and a call at the phone number in your profile
+{{ order.phone_number }} to discuss your needs and set up the first meeting.
+
+We are always ready to help you to reach your goals!
+
+If you need any help, you can contact us at {{ contact_email }}
+
+Sincerely,
+
+Life Maker

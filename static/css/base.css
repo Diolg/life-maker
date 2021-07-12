@@ -348,6 +348,12 @@ a .upbtn-link {
         border-radius: 0;
     }
 
+/*------Add-product-----*/
+
+.product-add {
+    margin-top:170px;
+}
+
 /*-----Footer-----*/
 
 .page-footer {
