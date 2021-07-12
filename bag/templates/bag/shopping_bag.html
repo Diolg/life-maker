@@ -47,7 +47,15 @@
     <div class="row">
         <div class="col-12 col-md-3 text-center">
             <p class="bag-text">{{ item.product.name }}</p>
-            <img class="img-fluid w-25" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+             
+                           {% if item.product.image %}
+                            <img class="img-fluid w-25" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                            {% else %}
+                            <img class="img-fluid w-25" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                            {% endif %}
+                            
+
+           <!----<img class="img-fluid w-25" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">-->
             <hr>
         </div>
 
