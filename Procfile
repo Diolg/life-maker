@@ -1,0 +1,1 @@
+web: gunicorn life_maker.wsgi:application
