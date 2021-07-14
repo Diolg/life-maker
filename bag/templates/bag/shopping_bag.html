@@ -47,15 +47,13 @@
     <div class="row">
         <div class="col-12 col-md-3 text-center">
             <p class="bag-text">{{ item.product.name }}</p>
-             
-                           {% if item.product.image %}
-                            <img class="img-fluid w-25" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
-                            {% else %}
-                            <img class="img-fluid w-25" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
-                            {% endif %}
-                            
 
-           <!----<img class="img-fluid w-25" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">-->
+            {% if item.product.image %}
+            <img class="img-fluid w-25" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+            {% else %}
+            <img class="img-fluid w-25" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+            {% endif %}
+
             <hr>
         </div>
 
@@ -87,17 +85,16 @@
                             </div>
                         </div>
                     </div>
-            </form>
-
-  <!--Edit/Remove items from bag options-->      
-            <div class="row pt-3">
-                <div class="col-4 offset-2 text-center">
-                    <a class="update btns">Edit</a>
-                </div>
-                <div class="col-4 text-center">
-                    <a class="remove btns" id="remove_{{ item.item_id }}">Remove</a>
-                </div>
-            </div>
+                     <!--Edit/Remove items from bag options-->
+                   <div class="row pt-3">
+                        <div class="col-4 offset-2 text-center">
+                            <a class="update btns">Edit</a>
+                        </div>
+                        <div class="col-4 text-center">
+                            <a class="remove btns" id="remove_{{ item.item_id }}">Remove</a>
+                        </div>
+                    </div>
+            </form>          
         </div>
 
     </div>
@@ -163,24 +160,26 @@
 {% include 'products/includes/quantity_input.html' %}
 
 <script type="text/javascript">
-// Update quantity on click
-$('.update').click(function(e) {
-        var form = $(this).prev('.update-sessions');
+    // Update quantity on click
+    $('.update').click(function (e) {
+        var form = $(this).prev('.update-form');
         form.submit();
     })
-// Remove item and reload on click
-    $('.remove').click(function(e) {
+    // Remove item and reload on click
+    $('.remove').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
         var url = `/bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
+        var data = {
+            'csrfmiddlewaretoken': csrfToken
+        };
         console.log(csrfToken)
 
 
         $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
+            .done(function () {
+                location.reload();
+            });
     })
 </script>
 {% endblock %}
