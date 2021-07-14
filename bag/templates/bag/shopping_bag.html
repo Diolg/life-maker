@@ -13,7 +13,6 @@
 {% block content %}
 
 <div class="container-fluid mb-2">
-
     <div class="row shopping">
         <div class="col text-center">
             <h1 class="logo-font mb-4 bag">Shopping Bag</h1>
@@ -21,12 +20,9 @@
     </div>
 
     <div class="row text-center">
-
-
         <div class="col">
             {% if bag_items %}
         </div>
-
 
         <div class="col-3 text-center">
             <p class="bag-text d-none d-md-block">Quantity</p>
@@ -85,8 +81,8 @@
                             </div>
                         </div>
                     </div>
-                     <!--Edit/Remove items from bag options-->
-                   <div class="row pt-3">
+                    <!--Edit/Remove items from bag options-->
+                    <div class="row pt-3">
                         <div class="col-4 offset-2 text-center">
                             <a class="update btns">Edit</a>
                         </div>
@@ -94,58 +90,56 @@
                             <a class="remove btns" id="remove_{{ item.item_id }}">Remove</a>
                         </div>
                     </div>
-            </form>          
+                </div>
+            </form>
         </div>
 
+        <div class="col-12 col-md-3 my-auto text-center">
+            <p class="bag-text d-none d-md-block">${{ item.product.price }}</p>
+        </div>
+
+        <div class="col-12 col-md-3 my-auto text-center">
+            <p class="bag-text">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+        </div>
+        {% endfor %}
+        <hr>
+
+        <div class="col-12 col-md-12 my-auto text-center">
+            <p><strong id="bag-total">Bag Total: ${{ grand_total|floatformat:2 }}</strong></p>
+        </div>
     </div>
 
-    <div class="col-12 col-md-3 my-auto text-center">
-        <p class="bag-text d-none d-md-block">${{ item.product.price }}</p>
+
+
+    <div class="bag-buttons row text-center justify-content-center text-center">
+        <div class="col-12 col-md-12 pt-4 pb-4 text-center">
+            <a href="{% url 'products' %}" class="btn btn-outline-secondary btn-lg shadow keep-shopping text-center">
+                <span class="icon">
+                    <i class="fas fa-chevron-left arrow-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
+            <a href="{% url 'checkout' %}" class="btn btn-outline-secondary btn-lg shadow text-center">
+                <span class="text-uppercase checkout">Secure Checkout</span>
+                <span class="icon checkout">
+                    <i class="fas fa-lock"></i>
+                </span>
+            </a>
+
+        </div>
     </div>
 
-    <div class="col-12 col-md-3 my-auto text-center">
-        <p class="bag-text">${{ item.product.price | calc_subtotal:item.quantity }}</p>
-    </div>
-    {% endfor %}
-    <hr>
+    {% else %}
 
+    <h2 class="mb-5 empty">This bag is empty</h2>
+    <a href="{% url 'products' %}" class="btn btn-outline-secondary btn-lg keep-shopping shadow">
+        <span class="icon">
+            <i class="fas fa-chevron-left arrow-left"></i>
+        </span>
+        <span class="text-uppercase">Keep Shopping</span>
+    </a>
 
-    <div class="col-12 col-md-12 my-auto text-center">
-        <p><strong id="bag-total">Bag Total: ${{ grand_total|floatformat:2 }}</strong></p>
-    </div>
-</div>
-
-
-
-<div class="bag-buttons row text-center justify-content-center text-center">
-    <div class="col-12 col-md-12 pt-4 pb-4 text-center">
-        <a href="{% url 'products' %}" class="btn btn-outline-secondary btn-lg shadow keep-shopping text-center">
-            <span class="icon">
-                <i class="fas fa-chevron-left arrow-left"></i>
-            </span>
-            <span class="text-uppercase">Keep Shopping</span>
-        </a>
-        <a href="{% url 'checkout' %}" class="btn btn-outline-secondary btn-lg shadow text-center">
-            <span class="text-uppercase checkout">Secure Checkout</span>
-            <span class="icon checkout">
-                <i class="fas fa-lock"></i>
-            </span>
-        </a>
-
-    </div>
-</div>
-
-{% else %}
-
-<h2 class="mb-5 empty">This bag is empty</h2>
-<a href="{% url 'products' %}" class="btn btn-outline-secondary btn-lg keep-shopping shadow">
-    <span class="icon">
-        <i class="fas fa-chevron-left arrow-left"></i>
-    </span>
-    <span class="text-uppercase">Keep Shopping</span>
-</a>
-
-{% endif %}
+    {% endif %}
 
 </div>
 
