@@ -332,8 +332,7 @@ a .upbtn-link {
 
 }
 
-.allauth-form-inner-content {
-    
+.allauth-form-inner-content {  
         margin-top: 170px;
         color: #fff;
     }
@@ -342,12 +341,8 @@ a .upbtn-link {
         display: none;       
     }
 
-.allauth-form-inner-content input::placeholder {
-        color: #fff;       
-    }
-
-    .allauth-form-inner-content button,
-    .allauth-form-inner-content input[type='submit'] {
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
         /* btn */
         display: inline-block;
         font-weight: 400;
