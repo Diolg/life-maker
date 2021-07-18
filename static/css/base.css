@@ -6,7 +6,7 @@ html {
 body {
     background: url('/media/balance.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: rgb(20, 19, 19);
+    color: #fff;
     font-family: 'Montserrat', sans-serif;
     height: calc(100vh - 164px);
     display: flex;
@@ -287,6 +287,14 @@ a .upbtn-link {
     margin-top: 170px;
 }
 
+.display {
+    display: inline-block;
+}
+
+.blog-subtitle {
+    margin-top: 25px;
+    color:rgb(194, 4, 4);
+}
 
 /*-----My Account----*/
 
@@ -355,6 +363,11 @@ a .upbtn-link {
 }
 
 a {
+    color: rgb(196, 13, 13);
+    text-decoration: none;
+}
+
+a:hover {
     color:#fff;
 }
 
