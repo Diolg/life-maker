@@ -149,7 +149,8 @@ span.icon:hover {
 }
 
 .details {
-    color: rgb(15, 15, 15)!important;
+    color: rgb(233, 15, 15)!important;
+    font-weight: bold;
 }
 
 /*-----Session details----*/
@@ -353,8 +354,6 @@ a .upbtn-link {
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        /*background-color: #000;*/
-        /*border: 1px solid #000;*/
         padding: .375rem .75rem;
         font-size: 1rem;
         line-height: 1.5;
