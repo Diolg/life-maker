@@ -21,14 +21,23 @@
     </div>
 </div>
 {% for post in posts %}
-<div class="post block">
+<div class="row post block">
+    <div class="col-12 col-md-6">
     <h2 class="blog-subtitle">{{ post.title }}</h2>
 
     <small>Posted at {{ post.date_added }}</small>
 
     <p>{{ post.intro }}</p>
     <a href="{% url 'post_detail' post.slug %}">Read more</a>
-
+    </div>
+    <div class="col-12 col-md-6">
+        <h2 class="blog-subtitle">{{ post.title }}</h2>
+    
+        <small>Posted at {{ post.date_added }}</small>
+    
+        <p>{{ post.intro }}</p>
+        <a href="{% url 'post_detail' post.slug %}">Read more</a>
+        </div>
 </div>
 {% endfor %}
 
