@@ -350,6 +350,14 @@ a .upbtn-link {
         border-radius: 0;
     }
 
+.table {
+    color:#fff;
+}
+
+.td a {
+    color:#fff;
+}
+
 /*------Add-product-----*/
 
 .product-add {
