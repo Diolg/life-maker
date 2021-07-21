@@ -1,8 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, reverse, redirect
 from django.contrib.auth.decorators import login_required
-# Create your views here.
-from .forms import CommentForm
+from django.contrib import messages
+from .forms import CommentForm, PostForm
 from .models import Post
+
 
 
 def blog(request):
@@ -16,6 +17,10 @@ def post_detail(request, slug):
 
     if request.method == 'POST':
         form = CommentForm(request.POST)
+        if not request.user:
+            messages.error(request,
+                           'Sorry, only registered shoppers can do that.')
+            return redirect(reverse('blog'))
 
         if form.is_valid():
             comment = form.save(commit=False)
@@ -27,4 +32,5 @@ def post_detail(request, slug):
         form = CommentForm()
 
     return render(request, 'blog/post_detail.html', {'post': post, 'form': form})
+
 
