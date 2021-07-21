@@ -153,6 +153,15 @@ span.icon:hover {
     font-weight: bold;
 }
 
+a.details {
+    color: #fff!important;
+}
+
+.bg-white {
+    background-color: #343A40 !important;
+}
+
+
 /*-----Session details----*/
 
 #session-about, #session-name, #session-price {
@@ -438,3 +447,50 @@ a:hover {
 .footer i:hover {
     color: #fff;
 }
+
+
+
+
+
+/*-------Media queries------*/
+
+@media(max-width:950px) {
+	.main-title {
+		margin-top: 120px;
+	}
+    .call {
+        margin-bottom: 30px;
+    }
+
+    small.details, a.details {
+        color: #000 !important;
+    }
+
+    .mb-0 text-uppercase font-weight-bold {
+        font-size: 12px;
+    }
+
+    .card-footer bg-white pt-0 border-0 text-left {
+        padding-top: ;
+
+    }
+    
+    
+}
+
+
+
+
+
+
+@media(min-width: 1400px) {
+	
+	.main-title {
+		margin-top: 200px;
+	}
+
+    .call {
+        margin-bottom: 30px;
+    }	
+}
+
