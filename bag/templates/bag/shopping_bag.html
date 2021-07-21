@@ -55,7 +55,7 @@
 
 
         <div class="col-12 col-md-3 justify-content-center">
-            <form class="form update-sessions" method="POST" action="{% url 'edit_bag' item.item_id %}">
+            <form class="form update-form" method="POST" action="{% url 'edit_bag' item.item_id %}">
                 {% csrf_token %}
                 <div class="form-group">
                     <div class="row">
@@ -84,7 +84,7 @@
                     <!--Edit/Remove items from bag options-->
                     <div class="row pt-3">
                         <div class="col-4 offset-2 text-center">
-                            <a class="update btns">Edit</a>
+                            <a class="update-link btns">Edit</a>
                         </div>
                         <div class="col-4 text-center">
                             <a class="remove btns" id="remove_{{ item.item_id }}">Remove</a>
@@ -155,8 +155,8 @@
 
 <script type="text/javascript">
     // Update quantity on click
-    $('.update').click(function (e) {
-        var form = $(this).prev('.update-sessions');
+    $('.update-link').click(function (e) {
+        var form = $(this).prev('.update-form');
         form.submit();
     })
     // Remove item and reload on click
