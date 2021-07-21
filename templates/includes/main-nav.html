@@ -38,7 +38,7 @@
             </div>
         </li>
 
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown mr-5">
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="career-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Career
             </a>
@@ -47,5 +47,15 @@
                 <a href="{% url 'products' %}?category=personal_letter" class="dropdown-item">Creating personal letter</a>
             </div>
         </li>
-    </ul>
+
+         <!--Blog-->
+    <li class="nav-item">
+        <a id="blog" class="logo-font font-weight-bold nav-link text-black" href="{% url 'blog' %}">
+                    Blog 
+        </a>
+    </li>
+
+
+
+    </ul>   
 </div>

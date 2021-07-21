@@ -35,9 +35,9 @@ main {
     color: #fff;
 }
 
-#blog {
+/*#blog {
     color: #fff;
-}
+}*/
 
 #mobile-search {
      color: #fff;
@@ -82,7 +82,7 @@ span.icon:hover {
     background-color:#343A40;
 }
 
-#all-products-link,#lifestyle-link,#health-link,#career-link,#home-link {
+#all-products-link,#lifestyle-link,#health-link,#career-link,#home-link,#blog {
     color:rgb(233, 15, 15);
 }
 
@@ -469,18 +469,9 @@ a:hover {
     .mb-0 text-uppercase font-weight-bold {
         font-size: 12px;
     }
-
-    .card-footer bg-white pt-0 border-0 text-left {
-        padding-top: ;
-
-    }
     
     
 }
-
-
-
-
 
 
 @media(min-width: 1400px) {
