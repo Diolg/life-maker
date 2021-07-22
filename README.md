@@ -1,59 +1,77 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Life Maker
 
-Welcome Diolg,
+![Home page](/media/life_maker_screenshot.png)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
 
-## Gitpod Reminders
+[View the live project here](http://life-maker.herokuapp.com/)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Application for people, who want to improve or change their life with the help of the coaching sessions 
+# Project description
+“Life Maker” is an e-commerce application that allows people who want to improve their life or change their lifestyle, find the necessary guidelines in the form of coaching sessions in different categories: Health, Lifestyle, Career. 
+The purpose of the application is to allow users to easily and quickly find the categories of interest to them, choose the necessary topic to work with the coach, see a brief description of the topic of the sessions, read brief information about the coach.  
 
-`python3 -m http.server`
+The user can select the number of sessions (the duration of the session is indicated in the description) and make purchase online. Additionally, users have the opportunity to create their own account, select the number of sessions, edit the number of sessions or delete them from the shopping-bag. At the same time, users can leave their comments under the posts of the application blog.  
 
-A blue button should appear to click: _Make Public_,
+There are the following categories of Users:  
 
-Another blue button should appear to click: _Open Browser_.
+1.	General Users
+3.	Admin (the Application Owner/the project team)  
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Thus, the Application will help to:
+-	Register/Sign in to the User Account
+-	Sign out from the User Account
+-	Easily view the list of sessions categories.
+-	Easily view the list of sessions in each category.
+-	Sort sessions by category/price
+-	Search sessions with the search option
+-	Choose sessions and add them to the shopping bag
+-	Choose/edit the amount of sessions
+-	Delete sessions from the shopping bag
+-	Purchase the needed quantity of sessions
+-	Leave comments under the application blog posts
 
-A blue button should appear to click: _Make Public_,
+# User Stories  
 
-Another blue button should appear to click: _Open Browser_.
+## General Users (First Time Visitors)  
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+-	As a first time user, I want to easily understand the main purpose of the application due to the clear layout.
+-	As a first time user, I want to be able to intuitively navigate through the application.
+-	As a first time user, I want the application be responsive on all devices.
+-	As a first time user, I want to be able to use the application on any device .
+-	As a first time user, I want to be able to navigate the application from any kind of devices.
+-	As a first time user to the website, I want to easily understand the main purpose of the website.
+-	As a first time user I want to easily register and login/out.
+-	As a first time user I want to easily recover my password in case i forget it.
+-	As a first time user I want to easily fins all the categories and sessions on the screen.
+-	As a first time user i want to easily sort sessions by categories.
+-	As a first time user i want to easily sort sessions by price. 
+-	As a first time user i want to easily search specific sessions.
+-	As a first time user i want to be able to easily access interesting to me sessions, to see their price, description, short information about coach and reviews.
+-	As a first time user i want to easily add products to the shopping bag from the all sessions list or after opening the session details page.
+-	As a first time user i want to easily increase or decrease number of each session.
+-	As a first time user i want to easily purchase or delete the product.
+-	As a first time user I want to be able to see the price of eah session as well as the total cost of the shopping bag.  
+-	As a first time user I want to have an intuitively clear, fast and secure payment method.
+-	As a first time user I want to easily understand how to create my own account.
+-	As a first time user I want to have my own profile page with the shopping history.
+-	As a first time user I want to receive onscreen or email notifications confirming my succes or failure of my actions.  
+-	As a first time user i want to easily see the rating of each coaching session.
+-	As a first time user i want to explore more information/articles about the problems i try to solve.
+-	As a first time user i want to share my opinion regarding posted articles in the application blog.
 
-To log into the Heroku toolbelt CLI:
+Returning visitors
+-	As a returning user I want to easily sign in to my account
+-	As a returning user I want to easily be able to view my previous purchases.
+-	As a returning user I want to edit my personal details in my account.
+-	As a returning user I want to follow up if there are new coaching sessions on the website.
+-	As a returning user I want to follow up new blog’s posts.
+-	As a returning user I want to explore other users’ opinioin about the raised in the blog subjects.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Admin (project team member)
+1.	As an Admin i want to easily add, update and delete products (sessions).
+2.	As an Admin i want to easily view, update and delete customer orders.
+3.	As an Admin i want to easily edit, update and delete blog posts. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
 
-## Updates Since The Instructional Video
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
----
-
-Happy coding!
