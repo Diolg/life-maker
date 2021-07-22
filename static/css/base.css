@@ -316,6 +316,10 @@ a .upbtn-link {
     color:rgb(194, 4, 4);
 }
 
+.small, small {
+    color:rgb(194, 4, 4);
+}
+
 /*-----My Account----*/
 
 .sign-out {
