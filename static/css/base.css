@@ -35,9 +35,6 @@ main {
     color: #fff;
 }
 
-/*#blog {
-    color: #fff;
-}*/
 
 #mobile-search {
      color: #fff;
@@ -270,15 +267,15 @@ a .upbtn-link {
 }
 
 .text-toast {
-    color:#000 !important;
+    color:#fff !important;
 }
 
 .toast-body {
-    color:#000 !important;
+    color:#fff !important;
 }
 
 .text-secure {
-    color:#000 !important;
+    color:#fff !important;
 }
 
 /*-----Checkout-----*/
@@ -450,8 +447,6 @@ a:hover {
 
 
 
-
-
 /*-------Media queries------*/
 
 @media(max-width:950px) {
@@ -472,6 +467,28 @@ a:hover {
     
     
 }
+
+
+/*@media(max-width:1200px) {
+	.main-title {
+		margin-top: 200px;
+        font-size: 70px;
+	}
+    .call {
+        margin-bottom: 70px;
+        font-size: 50px;
+    }
+
+    small.details, a.details {
+        color: #000 !important;
+    }
+
+    .mb-0 text-uppercase font-weight-bold {
+        font-size: 12px;
+    }
+        
+}*/
+
 
 
 @media(min-width: 1400px) {
