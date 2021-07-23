@@ -3,6 +3,7 @@ from django import forms
 from .models import Comment, Post
 from django.db import models
 
+
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment

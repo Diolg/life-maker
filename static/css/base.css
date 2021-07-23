@@ -113,6 +113,10 @@ span.icon:hover {
     color:#fff;
 }
 
+#blog:hover {
+    color:#fff;
+}
+
 .btn-danger {
     background-color:rgb(233, 15, 15)!important;
 }
@@ -319,6 +323,16 @@ a .upbtn-link {
 
 .display {
     display: inline-block;
+}
+
+.subtitle-blog {
+    color:rgb(194, 4, 4);
+}
+
+.transparent {
+background-color: rgb(36, 34, 34);
+opacity: 90%;
+
 }
 
 .blog-subtitle {
