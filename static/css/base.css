@@ -506,3 +506,12 @@ a:hover {
     }	
 }
 
+@media(max-width: 600px) {
+	
+	.nav-link {
+		padding: 0.1rem;
+	}
+
+    	
+}
+
