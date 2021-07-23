@@ -20,6 +20,16 @@ main {
    flex: 1 0 auto; 
 }
 
+/*---------------------------Navbar--*/
+
+.dropdown-menu.border-0 {
+    background-color: #343A40;  
+}
+
+a.dropdown-item {
+    color:#fff;
+}
+
 .nav-choice {
     color: rgb(233, 15, 15)
 }
@@ -511,6 +521,10 @@ a:hover {
 	.nav-link {
 		padding: 0.1rem;
 	}
+
+    .main-title {
+        margin-top: 10px;
+    }
 
     	
 }
