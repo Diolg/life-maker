@@ -57,7 +57,7 @@ def all_sessions(request):
         'current_sorting': current_sorting,
     }
 
-    return render(request, 'products/sessions.html', context)
+    return render(request, 'products/search_fail.html', context)
 
 
 def session_detail(request, product_id):
