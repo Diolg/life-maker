@@ -1,3 +1,4 @@
+/*-------------Stripe elements styling --*/
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
@@ -37,7 +38,7 @@
     
 }
 
-
+/*-------------Loading overlay --*/
 
 #loading-overlay {
 	display: none;
@@ -49,6 +50,7 @@
     background: rgba(23, 162, 184, .85);
     z-index: 9999;
 }
+
 
 .loading-spinner {
 	display: flex;

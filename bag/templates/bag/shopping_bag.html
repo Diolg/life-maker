@@ -11,49 +11,38 @@
 {% endblock %}
 
 {% block content %}
-
 <div class="container-fluid mb-2">
     <div class="row shopping">
         <div class="col text-center">
             <h1 class="logo-font mb-4 bag">Shopping Bag</h1>
         </div>
     </div>
-
     <div class="row text-center">
         <div class="col">
             {% if bag_items %}
         </div>
-
         <div class="col-3 text-center">
             <p class="bag-text d-none d-md-block">Quantity</p>
         </div>
-
         <div class="col-3 text-center">
             <p class="bag-text d-none d-md-block">Price</p>
         </div>
-
         <div class="col-3 text-center">
             <p class="bag-text d-none d-md-block">Total</p>
         </div>
-
     </div>
     <hr>
-
     {% for item in bag_items %}
     <div class="row">
         <div class="col-12 col-md-3 text-center">
             <p class="bag-text">{{ item.product.name }}</p>
-
             {% if item.product.image %}
             <img class="img-fluid w-25" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
             {% else %}
             <img class="img-fluid w-25" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
             {% endif %}
-
             <hr>
         </div>
-
-
         <div class="col-12 col-md-3 justify-content-center">
             <form class="form update-form" method="POST" action="{% url 'edit_bag' item.item_id %}">
                 {% csrf_token %}
@@ -93,24 +82,19 @@
                 </div>
             </form>
         </div>
-
         <div class="col-12 col-md-3 my-auto text-center">
             <p class="bag-text d-none d-md-block">${{ item.product.price }}</p>
         </div>
-
         <div class="col-12 col-md-3 my-auto text-center">
             <p class="bag-text">${{ item.product.price | calc_subtotal:item.quantity }}</p>
         </div>
         {% endfor %}
         <hr>
-
         <div class="col-12 col-md-12 my-auto text-center">
             <p><strong id="bag-total">Bag Total: ${{ grand_total|floatformat:2 }}</strong></p>
         </div>
     </div>
-
-
-
+    <!--Keep shopping button for getting back to all sessions page-->
     <div class="bag-buttons row text-center justify-content-center text-center">
         <div class="col-12 col-md-12 pt-4 pb-4 text-center">
             <a href="{% url 'products' %}" class="btn btn-outline-secondary btn-lg shadow keep-shopping text-center">
@@ -119,18 +103,16 @@
                 </span>
                 <span class="text-uppercase">Keep Shopping</span>
             </a>
+            <!--Secure checkout button-->
             <a href="{% url 'checkout' %}" class="btn btn-outline-secondary btn-lg shadow text-center">
                 <span class="text-uppercase checkout">Secure Checkout</span>
                 <span class="icon checkout">
                     <i class="fas fa-lock"></i>
                 </span>
             </a>
-
         </div>
     </div>
-
     {% else %}
-
     <h2 class="mb-5 empty">This bag is empty</h2>
     <a href="{% url 'products' %}" class="btn btn-outline-secondary btn-lg keep-shopping shadow">
         <span class="icon">
@@ -138,15 +120,10 @@
         </span>
         <span class="text-uppercase">Keep Shopping</span>
     </a>
-
     {% endif %}
-
-</div>
-
 </div>
 </div>
-
-
+</div>
 {% endblock %}
 
 {% block postloadjs %}

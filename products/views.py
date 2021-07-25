@@ -57,7 +57,7 @@ def all_sessions(request):
         'current_sorting': current_sorting,
     }
 
-    return render(request, 'products/search_fail.html', context)
+    return render(request, 'products/sessions.html', context)
 
 
 def session_detail(request, product_id):
@@ -88,7 +88,7 @@ def add_product(request):
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,

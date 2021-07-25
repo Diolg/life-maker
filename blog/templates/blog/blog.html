@@ -3,22 +3,20 @@
 
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
-
 {% block content %}
+<!--Blog's artickes page-->
 <div class="container">
     <div class="row blog text-center">
         <div class="col">
             <h1 class="logo-font mb-4" id="blog">Check out the latest articles</h1>
             <h2 class="text-white">Leave your comments</h2>
-            
-            
         </div>
     </div>
 </div>
@@ -26,16 +24,13 @@
 <div class="row post block">
     <div class="col-12 col-md-8 col-lg-8 mt-3 mb-3 display">
         <div class="card-body transparent">
-    <h2 class="blog-subtitle">{{ post.title }}</h2>
-
-    <small>Posted at {{ post.date_added }}</small>
-
-    <p>{{ post.intro }}</p>
-    <a href="{% url 'post_detail' post.slug %}">Read more</a>
+            <h2 class="blog-subtitle">{{ post.title }}</h2>
+            <small>Posted at {{ post.date_added }}</small>
+            <p>{{ post.intro }}</p>
+            <a href="{% url 'post_detail' post.slug %}">Read more</a>
         </div>
     </div>
 </div>
 {% endfor %}
-
 
 {% endblock %}

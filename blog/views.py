@@ -7,8 +7,7 @@ from .models import Post
 
 
 def blog(request):
-    posts = Post.objects.all()
-   
+    posts = Post.objects.all()   
     return render(request, 'blog/blog.html', {'posts': posts})
 
 @login_required
@@ -28,9 +27,8 @@ def post_detail(request, slug):
             comment.save()
 
             return redirect('post_detail', slug=post.slug)
-    else: 
+    else:
         form = CommentForm()
 
     return render(request, 'blog/post_detail.html', {'post': post, 'form': form})
-
-
+    

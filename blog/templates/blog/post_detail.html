@@ -3,65 +3,53 @@
 
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
+<!--Specific article block-->
 <h1 class="post-title text-center text-white">{{ post.title }}</h1>
-
 <div class="row">
     <div class="col-12 mb-3 card-body transparent">
-
-<small>Posted at {{ post.date_added }}</small>
-
-<p><strong>{{ post.intro }}</strong></p>
-
-<p>{{ post.body }}</p>
+        <small>Posted at {{ post.date_added }}</small>
+        <p><strong>{{ post.intro }}</strong></p>
+        <p>{{ post.body }}</p>
     </div>
-    </div>
-
+</div>
+<!--Comments block-->
 <h2 class="subtitle-blog mt-5">Comments</h2>
-
 {% for comment in post.comments.all %}
-    <article class="media">
-        <div class="media-content">
-            <div class="content">
-                <p>
-                    <strong>{{ comment.name }}</strong><small>{{ comment.date_added }}</small>
-                    <br>
-                    {{ comment.body }}
-                </p>
-            </div>
+<article class="media">
+    <div class="media-content">
+        <div class="content">
+            <p>
+                <strong>{{ comment.name }}</strong><small>{{ comment.date_added }}</small>
+                <br>
+                {{ comment.body }}
+            </p>
         </div>
-    </article>
+    </div>
+</article>
 
 {% empty %}
-    <div class="notifications">
-        <p>No comments yet</p>
-    </div>
+<div class="notifications">
+    <p>No comments yet</p>
+</div>
 {% endfor %}
 
+<!--Add comments block-->
 <h2 class="subtitle-blog mt-5">Add comment</h2>
-
 <form method="post" action=".">
     {% csrf_token %}
     {{ form|crispy }}
-    
     <div class="field">
         <div class="control">
             <button class="btn btn-outline-secondary">Submit</button>
         </div>
     </div>
-
 </form>
-{% endblock %}
-
-
-
-{% block postloadjs %}
-    
 {% endblock %}

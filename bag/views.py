@@ -3,8 +3,6 @@ from django.contrib import messages
 
 from products.models import Product
 
-# Create your views here.
-
 
 def shopping_bag(request):
     """ A view to return the shopping bag page  """
@@ -23,7 +21,6 @@ def add_to_bag(request, item_id):
         bag[item_id] += quantity
         messages.success(
             request, f'Updated {product.name} quantity to {bag[item_id]}')
-        
     else:
         bag[item_id] = quantity
         messages.success(request, f'Added {product.name} to your bag!')
@@ -64,4 +61,4 @@ def remove_from_bag(request, item_id):
 
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
-        return HttpResponse(status=500)  
+        return HttpResponse(status=500)

@@ -14,83 +14,78 @@
     <h2 class="center-align">Here you find sessions topics</h2>
     <h2>Choose a session with our coaches and change your life!</h2>
 </div>
-
 <div class="row">
-            <div class="product-container col-12 ">
-                <div class="row mt-1 mb-2"></div>
-                <!-- product cards -->
-                <div class="row">
-                    {% for product in products %}
-                        <div class="col-12 col-md-4 col-lg-4 card">
-                                {% if product.image %}
-                                <a href="{% url 'session_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'session_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card-body">
-                                    <p class="mb-0 text-uppercase font-weight-bold">{{ product.name }}</p>
-                                </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-
-                                        <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                                        {% if product.category %}
-                                        <p class="mt-1 mb-0">
-                                            <a class="details" href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}</a>
-                                        </p>
-                                        {% endif %}
-                                            {% if product.rating %}
-                                                <small class="details"><i class="fas fa-star mr-1"></i>{{ product.rating }} /5</small>
-                                            {% endif %}
-                                            {% if request.user.is_superuser %}
-                                                <small class="ml-3">
-                                                    <a href="{% url 'edit_product' product.id %}">Edit</a>
-                                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                                </small>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                </div>
+    <div class="product-container col-12 ">
+        <div class="row mt-1 mb-2"></div>
+        <!-- product cards -->
+        <div class="row">
+            {% for product in products %}
+            <div class="col-12 col-md-4 col-lg-4 card">
+                {% if product.image %}
+                <a href="{% url 'session_detail' product.id %}">
+                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="{% url 'session_detail' product.id %}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                </a>
+                {% endif %}
+                <div class="card-body">
+                    <p class="mb-0 text-uppercase font-weight-bold">{{ product.name }}</p>
+                </div>
+                <div class="card-footer bg-white pt-0 border-0 text-left">
+                    <div class="row">
+                        <div class="col">
+                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                            {% if product.category %}
+                            <p class="mt-1 mb-0">
+                                <a class="details"
+                                    href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}</a>
+                            </p>
+                            {% endif %}
+                            {% if product.rating %}
+                            <small class="details"><i class="fas fa-star mr-1"></i>{{ product.rating }} /5</small>
+                            {% endif %}
+                            {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a href="{% url 'edit_product' product.id %}">Edit</a>
+                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                            </small>
+                            {% endif %}
                         </div>
-                       
-                    {% endfor %}
+                    </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-         <!-- Move to top button -->
-
+    </div>
+</div>
+<!-- Move to top button -->
 <div>
     <button class="fas fa-arrow-circle-up" id="buttonUp"></button>
 </div>
-    </div>
-    
-    
+</div>
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
+{{ block.super }}
+<script type="text/javascript">
     document.getElementById("buttonUp").onclick = function scrollUpFunction() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
 
-    window.onscroll = function() {scrollFunction()}
+    window.onscroll = function () {
+        scrollFunction()
+    }
 
     function scrollFunction() {
         if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-            document.getElementById("buttonUp").style.display = "block";     
-        }
-        else {
+            document.getElementById("buttonUp").style.display = "block";
+        } else {
             document.getElementById("buttonUp").style.display = "none";
         }
 
     }
-		
-	</script>
+</script>
 {% endblock %}

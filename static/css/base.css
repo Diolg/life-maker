@@ -20,8 +20,7 @@ main {
    flex: 1 0 auto; 
 }
 
-/*---------------------------Navbar--*/
-
+/*------------------------------------Navbar--*/
 .dropdown-menu.border-0 {
     background-color: #343A40;  
 }
@@ -45,7 +44,6 @@ a.dropdown-item {
     color: #fff;
 }
 
-
 #mobile-search {
      color: #fff;
 }
@@ -61,7 +59,6 @@ a.dropdown-item {
 .btn .form-control {
     color: rgb(233, 15, 15)!important;
 }
-
 
 .home-nav-padding .main-text h1 {
     padding-top: 200px;
@@ -121,14 +118,13 @@ span.icon:hover {
     background-color:rgb(233, 15, 15)!important;
 }
 
-/*-------Buttons---------*/
+/*-----------------------------Buttons---------*/
 .btn,.btn-outline-secondary {
     color: #fff;
 }
 
 
-/*-----All sessions page-----*/
-
+/*---------------------------All sessions page-----*/
 .sessions-text {
     padding-top: 200px;
     color: #fff;
@@ -173,8 +169,7 @@ a.details {
 }
 
 
-/*-----Session details----*/
-
+/*------------------------------------Session details----*/
 #session-about, #session-name, #session-price {
     color: #fff;
 }
@@ -198,8 +193,7 @@ a .upbtn-link {
 
 }
 
-/*-------Shopping bag--------*/
-
+/*----------------------------------Shopping bag--------*/
 .shopping h1 {
     padding-top: 200px;
     color: #fff;
@@ -213,7 +207,6 @@ a .upbtn-link {
     color:rgb(233, 15, 15);
 }
 
-
 .arrow-left:hover {
     color:#fff;
 }
@@ -222,7 +215,6 @@ a .upbtn-link {
     text-align: center;
     color: #fff;
 }
-
 
 #keep-shopping {
     margin-top: 5px;
@@ -246,7 +238,6 @@ a .upbtn-link {
     margin-bottom: 15px;
 }
 
-
 .bag-buttons {
       text-align: center;
 }
@@ -256,9 +247,7 @@ a .upbtn-link {
     cursor: pointer;
 }
 
-
-/*----------Toasts---------*/
-
+/*-----------------------------------Toasts---------*/
 .message-container {
     position: fixed;
     top: 72px;
@@ -292,8 +281,7 @@ a .upbtn-link {
     color:#fff !important;
 }
 
-/*-----Checkout-----*/
-
+/*------------------------------------Checkout-----*/
 .checkout-edit-complete {
     display:inline-block;
     padding: 10px;
@@ -304,15 +292,13 @@ a .upbtn-link {
     margin-bottom: 0.1rem!important;
 }
 
-/*--------Checkout success--*/
-
+/*-----------------------------------Checkout success--*/
 .confirmation-message {
     margin-top: 170px;
 }
 
 
-/*------Blog-----*/
-
+/*--------------------------------Blog-----*/
 .blog {
     margin-top: 170px;
 }
@@ -344,37 +330,32 @@ opacity: 90%;
     color:rgb(194, 4, 4);
 }
 
-/*-----My Account----*/
-
+/*--------------------------------------My Account----*/
 .sign-out {
     margin-top: 170px;
     color: #fff;
-
 }
 
 .sign-up {
     margin-top: 170px;
-
 }
 
 .verify-email {
     margin-top: 170px;
-
 }
 
 .confirm-email {
     margin-top: 170px;
-
 }
 
 .allauth-form-inner-content {  
         margin-top: 170px;
         color: #fff;
-    }
+}
     
 .allauth-form-inner-content label:not([for='id_remember']) { 
         display: none;       
-    }
+}
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
@@ -392,7 +373,7 @@ opacity: 90%;
         font-size: 1rem;
         line-height: 1.5;
         border-radius: 0;
-    }
+}
 
 .table {
     color:#fff;
@@ -412,14 +393,12 @@ a:hover {
 }
 
 
-/*------Add-product-----*/
-
+/*-------------------------------------Add-product-----*/
 .product-add {
     margin-top:170px;
 }
 
-/*---Product form (from the project)----*/
-
+/*-------------------Product form (from the project)----*/
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -449,9 +428,7 @@ a:hover {
     border-radius: 0;
 }
 
-
-/*-----Footer-----*/
-
+/*--------------------------------------Footer-----*/
 .page-footer {
     padding: 15px;
     line-height: 1.5em;
@@ -473,10 +450,7 @@ a:hover {
     color: #fff;
 }
 
-
-
-/*-------Media queries------*/
-
+/*----------------------Media queries for large and medium devices---*/
 @media(max-width:950px) {
 	.main-title {
 		margin-top: 120px;
@@ -484,62 +458,30 @@ a:hover {
     .call {
         margin-bottom: 30px;
     }
-
     small.details, a.details {
         color: #000 !important;
     }
-
     .mb-0 text-uppercase font-weight-bold {
         font-size: 12px;
-    }
-    
-    
+    }       
 }
 
-
-/*@media(max-width:1200px) {
-	.main-title {
-		margin-top: 200px;
-        font-size: 70px;
-	}
-    .call {
-        margin-bottom: 70px;
-        font-size: 50px;
-    }
-
-    small.details, a.details {
-        color: #000 !important;
-    }
-
-    .mb-0 text-uppercase font-weight-bold {
-        font-size: 12px;
-    }
-        
-}*/
-
-
-
-@media(min-width: 1400px) {
-	
+@media(min-width: 1400px) {	
 	.main-title {
 		margin-top: 200px;
 	}
-
     .call {
         margin-bottom: 30px;
     }	
 }
 
-@media(max-width: 600px) {
-	
+/*----------------------Media queries for small devices---*/
+@media(max-width: 600px) {	
 	.nav-link {
 		padding: 0.1rem;
 	}
-
     .main-title {
         margin-top: 10px;
-    }
-
-    	
+    }    	
 }
 
