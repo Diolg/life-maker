@@ -9,9 +9,11 @@
 # Project description
 “Life Maker” is an e-commerce application that allows people who want to improve their life or change their lifestyle, find the necessary guidelines in the form of coaching sessions in different categories: Health, Lifestyle, Career.  
 
+The idea appeared due to the fact that in time of the current unknownness in front of the future, stress, inability to stop in time and listen to ourneself, many people have a need to communicate with professionals who would help in choosing the right path in life and understand our won needs.
+
 The purpose of the application is to allow users to easily and quickly find the categories of interest to them, choose the necessary topic to work with the coach, see a brief description of the topic of the sessions, read brief information about the coach.  
 
-The user can select the number of sessions (the duration of the session is indicated in the description) and make purchase online. Additionally, users have the opportunity to create their own account, select the number of sessions, edit the number of sessions or delete them from the shopping-bag. At the same time, users can leave their comments under the posts of the application blog.  
+The user can select the number of sessions and make purchase online. Additionally, users have the opportunity to create their own account, select the number of sessions, edit the number of sessions or delete them from the shopping-bag. At the same time, users can leave their comments under the posts of the application blog.  
 
 There are the following categories of Users:  
 
@@ -78,7 +80,7 @@ Thus, the Application will help to:
 3.	As an Admin i want to easily edit, update and delete blog posts.  
 
 # Database Model
-![database](/media/life_maker_db_new.pdf)
+[Database](/media/life_maker_db_new.pdf)
 
 
 # UX
