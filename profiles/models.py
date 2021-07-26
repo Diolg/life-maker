@@ -5,7 +5,7 @@ from django.dispatch import receiver
 
 from django_countries.fields import CountryField
 
-# Create your models here.
+
 class UserProfile(models.Model):
     """
     A user profile model to maintain default 
@@ -19,9 +19,10 @@ class UserProfile(models.Model):
     default_county = models.CharField(max_length=80, null=True, blank=True)
     default_postcode = models.CharField(max_length=20, null=True, blank=True)
     default_country = CountryField(blank_label='Country', null=True, blank=True)
-    
+
     def __str__(self):
         return self.user.username
+
 
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
