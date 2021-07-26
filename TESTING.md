@@ -2,10 +2,110 @@
 
 A lot of testing was carried out, including Google Chrome developer tools, manual testing on desktops, laptops, mobile devices as well as different browsers (more detailed in the “Further Testing section”). The owner’s friends and family were asked to provide the feedback and test the website, what was considered in order to make the website more attractive visually and easier to navigate (more details in the “Known Bugs” section).  
 
+# Users story testing  
+
+## General Users  
+
+## First Time Visitors
+
+-	As a first time user, I want to easily understand the main purpose of the application due to the clear layout.  
+1. This can be achieved due to the Home page with the call to action to reach balance in life by choosing coaching sessions.  
+2. The navbar with Sessions categories give the clear idea what life areas can be covered by sessions (Life Style, Health, Career)  
+-	As a first time user, I want to be able to intuitively navigate through the application.  
+1. Navigation bar with the logo and all necessary links for the best navigation.  
+2. Validated forms for easy signin/signup/signout, creating/editing orders, editing/deleting products from shopping bag.  
+3. Search option to easily find a needed Session.  
+4. Buttons for the better interaction and executing any needed action.
+-	As a first time user, I want the application be responsive on all devices.  
+1. Application is responsive on all kinds of devices.
+-	As a first time user, I want to be able to use the application on any device.  
+1. It is easy to use the Application on all kinds of devices due to its laconic and clear layout.
+-	As a first time user, I want to be able to navigate the application from any kind of devices.  
+1. The mobile version of the application provides a comfortably to use mobile side navigation bar 
+-	As a first time user I want to easily register and login/out.  
+1. This can be easily achieved by going to "My Account" on the navbar and choosing the needed action.  
+-	As a first time user I want to easily recover my password in case i forget it.  
+1. This can  be easily achieved by going to "My Account" on the navbar, choosing "Login".  
+2. On Sign In displayed page below the form and buttons there is "Forgot Password" link.  
+3. After hitting the link User is redirected to the Password reset page.  
+4. User should provide the password and hit "Reset my password" button.  
+5. A link will be provided in the mail message.  
+6. User hits the link and is directed to provide a new password.
+-	As a first time user I want to easily find all the categories and sessions on the screen.  
+1. This can be achieved by going to the Navbar and choosing "All Sessions" link.  
+2. In the dropdown menu User chooses "All Sessions".  
+3. As alternative, User hits the "Choose your session with our coaches" button on the Home page.
+-	As a first time user i want to easily sort sessions by categories.  
+1. This can be achieved by choosing "All Sessions" on the Navbar.  
+2. In the dropdown menu User chooses "By Category".
+-	As a first time user i want to easily sort sessions by price.  
+1. This can be achieved by choosing "All Sessions" on the Navbar.  
+2. In the dropdown menu User chooses "By Price". 
+-	As a first time user i want to easily search specific sessions.  
+1. This can be easily achieved by entering key words of the sessions titles or sessions description.
+-	As a first time user i want to be able to easily access interesting to me sessions, to see their price, description, short information about coach and reviews.  
+1. This can be achieved by pressing "Choose your session with our coaches" button on the Home page, or by choosing "All Sessions" from the "All sessions" dropdown menu on the Navbar.
+-	As a first time user i want to easily add products to the shopping bag from the all sessions list or after opening the session details page.  
+1. This can be easily achieved by choosing a specific Session from the list, pressing on the Session image and pressing "Add to bag" button.
+-	As a first time user i want to easily increase or decrease number of each session.  
+1. This can be easily achieved from the specific Session page.  
+1. This can be easily achieved from the Shopping Bag page with "Edit" button and "minus"/"plus" icons.
+-	As a first time user i want to easily purchase or delete the product.  
+1. This can be easily achieved by pressing "Secure checkout" button and "Remove" button on the Shopping bag page.
+-	As a first time user I want to be able to see the price of eah session as well as the total cost of the shopping bag.  
+1. All this information is provided on the "Shopping Bag"/"Checkout"/"Checkout success" pages.
+-	As a first time user I want to have an intuitively clear, fast and secure payment method.  
+1. This can be achieved by logginin/registering.  
+2. Going to the "All Sessions" page and choosing desired product.  
+3. Adding the product to the Shopping bag.  
+4. Going to Secure Checkout from the success toast-message.  
+5. Reviewing the SHopping Bag.  
+6. Choosing the Secure checkout and filling the respective form with personal data and delivery information, providing the card number and choosing "Complete Order" button.
+-	As a first time user I want to easily understand how to create my own account.  
+1. This can be achieved by going to "My Account" on the Navbar and choosing "Register".
+-	As a first time user I want to have my own profile page with the shopping history.  
+1. This can be achieved by loggingin/registering to the website, creating order, going to the checkout.  
+2. After hitting the "My Profile" link in "My Account" on the Navbar, User will be directed to the "My Profile" page with orders history.
+-	As a first time user I want to receive onscreen or email notifications confirming my succes or failure of my actions.  
+1. Users get success/error notifications through alert-messages on the right top part of the screen in case of: signup/signin/signout/checkout/updating or removing product quantity/adding product to the shopping bag.  
+2. Users get onscreen notifications when they choose a Session/go to secure checkout  
+3. Users get email notifications when they register to the website.
+-	As a first time user i want to easily see the rating of each coaching session.
+1. The Sessions ratings are displayed on the "All Sessions" page on each Sessions card.  
+-	As a first time user i want to explore more information/articles about the problems i try to solve.  
+1. This can be achieved by registering/signing in and visiting the Blog/Comments section on the Blog page.  
+-	As a first time user i want to share my opinion regarding posted articles in the application blog.  
+1. This can be achieved by registering/signing in and visiting the Comments section on the Blog page.  
+2. User needs to fill in the form with the comment content and hit the "Submit" button.
+
+## Returning visitors  
+
+-	As a returning user I want to easily sign in to my account  
+1. This can be achieved from "My Account"/"Login" on the Navbar
+-	As a returning user I want to edit my personal details in my account.  
+1. This can be achieved from "Checkout" or "Shopping" bag pages, where User can edit or remove the product/delivery information. 
+-	As a returning user I want to follow up if there are new coaching sessions on the website.
+1. This can be achieved by regular visiting website or following the project socail media.
+-	As a returning user I want to follow up new blog’s posts.
+1. This can be achieved by regular visiting the "Blog" page of the website.
+-	As a returning user I want to explore other users’ opinioin about the raised in the blog subjects.  
+1. This can be achieved by regular checking the Comments section in the Blog application.
+
+## Admin (or a project team member)  
+
+-	As an Admin i want to easily add, update and delete products (sessions).
+1. Edit/delete can be acheieved from the "All Sessions"/"Sessions details" pages with the help of "edit"/"delete" buttons.  
+2. To add session Admin should go to the "Product Administration" on "My Account" on the Navbar.
+-	As an Admin i want to easily view and delete customer orders.  
+1. This can be achieved through the Django database (Checkout/Orders section)
+-	As an Admin i want to be able to edit, update and delete blog posts as well as comments. 
+1. This can be achieved from the Django database (Blog/Comments/Post section).
 
 
 
-# Manual testing of all elements and funcionality
+
+
+# Manual testing of all elements and functionality
 
 - Navigation bar  
 
@@ -155,19 +255,26 @@ The order total and grand total should match.
 
 
 
-
-
-
-
 ## Further Testing
 - The website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
 - The website was viewed on a variety of devices such as Desktop, Laptop, iPhone 8, Xiaomi Mi Note 10, Xiaomi Note 10 Pro.
 - A large amount of testing was done to ensure that all internal/external links work correctly.
 - Friends and family members were asked to review the website to point out any bugs and/or user experience issues.  
 
+## Known bugs  
 
+- During the development of the site, an error occurred and the development secret key was shown. Unfortunately, this error was not noticed immediately, but as a result the secret key was changed.  
+- It was not possible to find sessions by category in the search. The bug was fixed thanks to corrections in the code indentation and the correction of the programmatic names of categories.  
+- JS toggle button was not functional. The bug was fixed by changing the postload js code.  
+- It was not possible to calculate the Total for a certain number of products in the Shopping Bag. It was fixed by removin ${{ total }} by {{ item.product. price | calc_subtotal.item.quantity }}  
+- The functionality of the Sessions quantity editing did not work in the "Shopping Bag". Fixed by changing in the JS code the targeted element.  
+- On Checkout page in the dropdown menu for choosing a cointry, the country list was not displayed. Fixed the issue by targeting the countries names elements and adding the black color in the css.  
+- Could not apply Favicon on the deployed version. Solved the issue by uploading needed Favicon elements i nthe AWS bucket Media folder.  
+- Had navbar styling issues on mobile devices: the shopping bag link was displayed under the toggle menu button. Fixed this by decrreasing pixels in nav elements icons padding. 
 
+## Non-resolved bugs  
 
+- Due to lack of time, did not manage to resolve the following: after the User's order is confirmed onscreen, the User does not get the order confirmation email. The project owner is going to work on this issue in order to fix it.  
 
 
 

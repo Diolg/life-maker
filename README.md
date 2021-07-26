@@ -69,7 +69,6 @@ Thus, the Application will help to:
 ## Returning visitors  
 
 -	As a returning user I want to easily sign in to my account
--	As a returning user I want to easily be able to view my previous purchases.
 -	As a returning user I want to edit my personal details in my account.
 -	As a returning user I want to follow up if there are new coaching sessions on the website.
 -	As a returning user I want to follow up new blog’s posts.
