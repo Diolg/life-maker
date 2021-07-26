@@ -78,7 +78,7 @@ Thus, the Application will help to:
 3.	As an Admin i want to easily edit, update and delete blog posts.  
 
 # Database Model
-	![database](/media/life_maker_db_new.pdf)
+	![Database](/media/life-maker-db_new.pdf)
 
 
 
@@ -192,7 +192,7 @@ The owner used 'Montserrat', sans-serif font type for all text content, includin
 The large, background image with a theme of stones is applied to convey the main idea of the website about harmony and balance. This image is provided throughout all application’s pages to keep the style consistency. The main idea of the photo is stones arranged vertically and keeping balance. The background of the photo is a wave, which symbolizes the preservation of balance in any situation.
 
 # Wireframes
-[Here you can find the wireframes](/media/life_maker_wireframes.pdf)
+[Here you can find the wireframes](/media/life_maker_wireframes_new.pdf)
 
 
 
