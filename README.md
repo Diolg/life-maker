@@ -78,7 +78,7 @@ Thus, the Application will help to:
 3.	As an Admin i want to easily edit, update and delete blog posts.  
 
 # Database Model
-	[database](/media/life-maker-db_new.pdf)
+![database](/media/life_maker_db_new.pdf)
 
 
 # UX
