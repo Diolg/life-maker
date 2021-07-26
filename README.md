@@ -5,8 +5,10 @@
 
 [View the live project here](http://life-maker.herokuapp.com/)
 
-## Application for people, who want to improve or change their life with the help of the coaching sessions 
+## Application for people, who want to improve or change their life with the help of the coaching sessions
+
 # Project description
+
 “Life Maker” is an e-commerce application that allows people who want to improve their life or change their lifestyle, find the necessary guidelines in the form of coaching sessions in different categories: Health, Lifestyle, Career.  
 
 The idea appeared due to the fact that in time of the current unknownness in front of the future, stress, inability to stop in time and listen to ourneself, many people have a need to communicate with professionals who would help in choosing the right path in life and understand our won needs.
@@ -190,7 +192,9 @@ The owner used 'Montserrat', sans-serif font type for all text content, includin
 
 ## Imagery  
 
-The large, background image with a theme of stones is applied to convey the main idea of the website about harmony and balance. This image is provided throughout all application’s pages to keep the style consistency. The main idea of the photo is stones arranged vertically and keeping balance. The background of the photo is a wave, which symbolizes the preservation of balance in any situation.
+The large, background image with a theme of stones is applied to convey the main idea of the website about harmony and balance. This image is provided throughout all application’s pages to keep the style consistency. The main idea of the photo is stones arranged vertically and keeping balance. The background of the photo is a wave, which symbolizes the preservation of balance in any situation.  
+
+The Coaches images embody positive faces, which bring good vibes and trust to Users.
 
 # Wireframes
 [Here you can find the wireframes](/media/life_maker_wireframes_new.pdf)
@@ -290,6 +294,54 @@ They are provided on the pages:
 -	Admin possibility to Add/Edit/Delete Blog posts on the frontend side.
 -	Admin possibility to Add/Edit/Delete Blog Comments on the frontend side.
 -	Functionality for getting by User the real Email Order Confirmation.
+
+# Technologies Used
+
+## Languages Used  
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/CSS)
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+-   [jQuery](https://en.wikipedia.org/wiki/JQuery)
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))  
+
+## Frameworks, Libraries & Programs Used
+
+-   [Bootstrap 4.4.1](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+    I used Bootstrap to provide the responsiveness and styling of the website as well as navigation bar, footer, buttons, panel cards.
+-   [jQuery](https://jquery.com/) 
+    jQuery comes with Bootstrap to make the navbar and the application in a whole responsive.  
+-   [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) Is used for the Python template.  
+-   [Heroku](https://dashboard.heroku.com/) The cloud platform for deploying the app.  
+-   [Django](https://www.djangoproject.com/) High-level Python Web framework.
+-   [PostgresSQL](https://www.postgresql.org/) Used for deployed website.
+-   [AWS](https://aws.amazon.com/) Used for storing static files.
+-   [Stripe](https://stripe.com/en-se) Used to handle the payments at checkout.
+-   [Randomkeygen](https://randomkeygen.com/) Used to generate random key.
+-   [Git](https://git-scm.com/) 
+    I used Git for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+-   [GitHub](https://github.com/)
+    I used GitHub to store the projects code after being pushed from Git.
+-   [Balsamiq](https://balsamiq.com/) 
+    I used Balsamiq to create initial wireframes for the project design.
+-   [AmIResponsive]( http://ami.responsivedesign.is/)  
+    I used this service for making my project screenshots
+-   [W3C Markup Validation Service](https://validator.w3.org/) 
+    I used this service for testing HTML
+-   [W3C CSS Validation Service](https://jigsaw.w3.org/) 
+    I used this service for testing CSS
+-   [JSHint](https://jshint.com/)
+    I used this service for possible errors identification in the JS code
+-   [Realfavicongenerator](https://realfavicongenerator.net/)
+    I used this service for generating favicon for the website
+-   [PEP8 online](http://pep8online.com/)
+    I used this service for possible errors identefication in the Python code
+-   [Iconfinder](https://www.iconfinder.com/search/?q=castle&price=free)
+         I used it to generate icon for website favicon
+-   [Lighthouse](https://developers.google.com/web/tools/lighthouse)
+         I used it to audit performance of the application
+-   Chrome Developer Tools 
+    I used this service to test code changes and responsivity of landing page.  
 
 
 
