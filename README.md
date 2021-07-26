@@ -225,7 +225,8 @@ The Coaches images embody positive faces, which bring good vibes and trust to Us
 10.	“My Account” allows to Register/Login for non-registered/non-logged in Users.
 11.	“Shopping bag” icon with link leads to the Registerde/Logged-in Users Shopping Bag.  
 
--	Buttons
+-	Buttons  
+
 Buttons are provided by the Bootstrap (4.4.1) and allow users to easily navigate to the required page or execute a desired action. Buttons allow to sign in/sign up/sign out, create/edit/delete products from the shopping bag or during the checkput process or make/reset actions, cancel actions.  
 
 -	Toast-messages 
@@ -342,6 +343,11 @@ They are provided on the pages:
          I used it to audit performance of the application
 -   Chrome Developer Tools 
     I used this service to test code changes and responsivity of landing page.  
+
+# Testing  
+
+[View testing information here](/TESTING.md)
+
 
 
 
