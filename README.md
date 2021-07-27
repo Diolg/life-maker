@@ -145,7 +145,7 @@ Thus, Users can:
 -	Clearly see the field for entering the Card number for making  pruchase
 -	Clearly see the Edit Bag/Complete Order buttons
 -	Clearly see how much the User is charged.  
-![navbar](/media/checkput_success.png)
+![navbar](/media/checkout_success.png)
 
 
 8. After hitting the Secure Checkout button, User can:
