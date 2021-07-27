@@ -58,26 +58,30 @@ A lot of testing was carried out, including Google Chrome developer tools, manua
 1. This can be achieved by pressing "Choose your session with our coaches" button on the Home page, or by choosing "All Sessions" from the "All sessions" dropdown menu on the Navbar.  
 ![allsessions](/media/all_sessions.png)
 -	As a first time user i want to easily add products to the shopping bag from the all sessions list or after opening the session details page.  
+![session](media/add_tobag.png)
 1. This can be easily achieved by choosing a specific Session from the list, pressing on the Session image and pressing "Add to bag" button.
 -	As a first time user i want to easily increase or decrease number of each session.  
 1. This can be easily achieved from the specific Session page.  
-1. This can be easily achieved from the Shopping Bag page with "Edit" button and "minus"/"plus" icons.
+1. This can be easily achieved from the Shopping Bag page with "Edit" button and "minus"/"plus" icons.  
+![shopping_bag](media/secure_checkout.png)
 -	As a first time user i want to easily purchase or delete the product.  
 1. This can be easily achieved by pressing "Secure checkout" button and "Remove" button on the Shopping bag page.
 -	As a first time user I want to be able to see the price of eah session as well as the total cost of the shopping bag.  
-1. All this information is provided on the "Shopping Bag"/"Checkout"/"Checkout success" pages.
+1. All this information is provided on the "Shopping Bag"/"Checkout"/"Checkout success" pages.  
+![checkout](media/checkout_success.png)
 -	As a first time user I want to have an intuitively clear, fast and secure payment method.  
 1. This can be achieved by logginin/registering.  
 2. Going to the "All Sessions" page and choosing desired product.  
 3. Adding the product to the Shopping bag.  
 4. Going to Secure Checkout from the success toast-message.  
-5. Reviewing the SHopping Bag.  
+5. Reviewing the Shopping Bag.  
 6. Choosing the Secure checkout and filling the respective form with personal data and delivery information, providing the card number and choosing "Complete Order" button.
 -	As a first time user I want to easily understand how to create my own account.  
 1. This can be achieved by going to "My Account" on the Navbar and choosing "Register".
 -	As a first time user I want to have my own profile page with the shopping history.  
 1. This can be achieved by loggingin/registering to the website, creating order, going to the checkout.  
-2. After hitting the "My Profile" link in "My Account" on the Navbar, User will be directed to the "My Profile" page with orders history.
+2. After hitting the "My Profile" link in "My Account" on the Navbar, User will be directed to the "My Profile" page with orders history.  
+![myaccount](/media/my_account.png)
 -	As a first time user I want to receive onscreen or email notifications confirming my succes or failure of my actions.  
 1. Users get success/error notifications through alert-messages on the right top part of the screen in case of: signup/signin/signout/checkout/updating or removing product quantity/adding product to the shopping bag.  
 2. Users get onscreen notifications when they choose a Session/go to secure checkout  
@@ -86,9 +90,11 @@ A lot of testing was carried out, including Google Chrome developer tools, manua
 1. The Sessions ratings are displayed on the "All Sessions" page on each Sessions card.  
 -	As a first time user i want to explore more information/articles about the problems i try to solve.  
 1. This can be achieved by registering/signing in and visiting the Blog/Comments section on the Blog page.  
+![blog](/media/blog.png)
 -	As a first time user i want to share my opinion regarding posted articles in the application blog.  
 1. This can be achieved by registering/signing in and visiting the Comments section on the Blog page.  
-2. User needs to fill in the form with the comment content and hit the "Submit" button.
+2. User needs to fill in the form with the comment content and hit the "Submit" button.  
+![comment](/media/comments.png)
 
 ## Returning visitors  
 

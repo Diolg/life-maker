@@ -91,6 +91,7 @@ Thus, Users can:
 1. Due to the Home page:
 -	Clearly understand that the project’s purpose is to allow people to improve their life or change their lifestyle, find the necessary guidelines in the form of coaching sessions in different categories: Health, Lifestyle, Career.  
 -	Clearly understand that due to the button “choose sessions with our coaches” it is possible to be redirected to the full list of sessions to choose.  
+![home](/media/home_page.png)
 
 2. Due to the Navigation bar (toggled option on mobile devices):
 -	Clearly understand that there is a search option to find specific sessions by a key word.
@@ -104,6 +105,7 @@ Thus, Users can:
 -	In case if the Regular User is Signed In, it is always possible to view the User’s profile with previous created orders (or to see that the shopping bag is emplty).
 -	In case if the Admin User is Signed In, it is always possible to view the User’s profile with previous created orders (or to see that the shopping bag is emplty) or to do the Project Administration (add/edit/delete products).
 -	Clearly understand that it is always possible to get to the personal Account and see the Shopping Bag.  
+![navbar](/media/navbar_dropdown.png)
 
 3.  Due to the All Sessions page:
 -	Easily find all presented sessions with coaches.
@@ -112,6 +114,8 @@ Thus, Users can:
 -	Category it belongs to
 -	Rating
 -	Edit/Delete options for Admin  
+![navbar](/media/all_sessions.png)
+
 
 4. After hitting the Session photo, User can:
 -	Clearly see (besides the Session Title/Price/Category/Rating) the Sessions description and Coach description. 
@@ -119,15 +123,21 @@ Thus, Users can:
 -	Easily find how to add the Session to the Shopping Bag by hitting the relative  button.
 -	Easily find how to get back to sessions by hitting the respective  button.
 -	Edit/Delete options for Admin.  
+![navbar](/media/session_details.png)
+
 
 5. After adding the Session to the Shopping Bag, User can:
 -	Clearly see the Success/Error toast-message with the additional info. 
 -	In case of Success, User clearly sees the Order information in the toast message: Session title/Quantity/Total price/Button to Secure Checkout.  
 -	Easily go to the Secure Checkout due to the respective button.  
+![navbar](/media/add_tobag.png)
+
 
 6. After hitting the Secure Checkout button, User can:
 -	Clearly see the Shopping Bag with Coach photo/Session title/Quantity/Total price/Button to Secure Checkout/ Button to Keep Shopping.  
 -	Clearly see the possibility to Edit/Remove the Sessions Quantity.  
+![navbar](/media/checkout.png)
+
 
 7. After hitting the Secure Checkout button, User can:
 -	Clearly see the Order details with Coach photo/Session title/Quantity/Order Price/Total price/ 
@@ -135,6 +145,8 @@ Thus, Users can:
 -	Clearly see the field for entering the Card number for making  pruchase
 -	Clearly see the Edit Bag/Complete Order buttons
 -	Clearly see how much the User is charged.  
+![navbar](/media/checkput_success.png)
+
 
 8. After hitting the Secure Checkout button, User can:
 -	Clearly see the Order details with Order Number/Price/User name/Address and Phone Details/Total price/ 
