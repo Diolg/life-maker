@@ -32,6 +32,7 @@ A lot of testing was carried out, including Google Chrome developer tools, manua
 -	As a first time user, I want to be able to navigate the application from any kind of devices.  
 1. The mobile version of the application provides a comfortably to use mobile side navigation bar 
 -	As a first time user I want to easily register and login/out.  
+![navbar](/media/signin.png)
 1. This can be easily achieved by going to "My Account" on the navbar and choosing the needed action.  
 -	As a first time user I want to easily recover my password in case i forget it.  
 1. This can  be easily achieved by going to "My Account" on the navbar, choosing "Login".  
@@ -43,6 +44,7 @@ A lot of testing was carried out, including Google Chrome developer tools, manua
 -	As a first time user I want to easily find all the categories and sessions on the screen.  
 1. This can be achieved by going to the Navbar and choosing "All Sessions" link.  
 2. In the dropdown menu User chooses "All Sessions".  
+![dropdown](/media/navbar_dropdown.png)
 3. As alternative, User hits the "Choose your session with our coaches" button on the Home page.
 -	As a first time user i want to easily sort sessions by categories.  
 1. This can be achieved by choosing "All Sessions" on the Navbar.  
@@ -53,7 +55,8 @@ A lot of testing was carried out, including Google Chrome developer tools, manua
 -	As a first time user i want to easily search specific sessions.  
 1. This can be easily achieved by entering key words of the sessions titles or sessions description.
 -	As a first time user i want to be able to easily access interesting to me sessions, to see their price, description, short information about coach and reviews.  
-1. This can be achieved by pressing "Choose your session with our coaches" button on the Home page, or by choosing "All Sessions" from the "All sessions" dropdown menu on the Navbar.
+1. This can be achieved by pressing "Choose your session with our coaches" button on the Home page, or by choosing "All Sessions" from the "All sessions" dropdown menu on the Navbar.  
+![allsessions](/media/all_sessions.png)
 -	As a first time user i want to easily add products to the shopping bag from the all sessions list or after opening the session details page.  
 1. This can be easily achieved by choosing a specific Session from the list, pressing on the Session image and pressing "Add to bag" button.
 -	As a first time user i want to easily increase or decrease number of each session.  
