@@ -5,8 +5,8 @@ A lot of testing was carried out, including Google Chrome developer tools, manua
 ## Code Validation  
 
 [Validator.w3.org](https://validator.w3.org/)- HTML code validation. No major issues found.  
-[Jigsaw.w3.org/css](https://jigsaw.w3.org/)-validator - No errors found.
-[Jshint.com/](https://jshint.com/) - Used for validation of Javascript code. No major issues found.
+[Jigsaw.w3.org/css](https://jigsaw.w3.org/)-validator - No errors found.  
+[Jshint.com/](https://jshint.com/) - Used for validation of Javascript code. No major issues found.  
 [Pep8online.com](http://pep8online.com/) - Used for validating Python code. Tried to fix as many issues as possible throughout the development. The remaining issues are related to the "line too long".
 
 
@@ -19,6 +19,7 @@ A lot of testing was carried out, including Google Chrome developer tools, manua
 -	As a first time user, I want to easily understand the main purpose of the application due to the clear layout.  
 1. This can be achieved due to the Home page with the call to action to reach balance in life by choosing coaching sessions.  
 2. The navbar with Sessions categories give the clear idea what life areas can be covered by sessions (Life Style, Health, Career)  
+![navbar](/media/navbar.png)
 -	As a first time user, I want to be able to intuitively navigate through the application.  
 1. Navigation bar with the logo and all necessary links for the best navigation.  
 2. Validated forms for easy signin/signup/signout, creating/editing orders, editing/deleting products from shopping bag.  
