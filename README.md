@@ -294,6 +294,9 @@ They are provided on the pages:
 5. There is “Submit” button displayed below the From.
 6. Once the “Submit” button is hit the new Comment is displayed below the Article.
 7. Admin has the right to add/edit/delete Posts from the database.  
+![navbar](/media/blog.png)  
+![navbar](/media/comments.png)
+
 
 - Sign UP  
 
