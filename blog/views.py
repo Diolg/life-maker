@@ -5,10 +5,10 @@ from .forms import CommentForm, PostForm
 from .models import Post
 
 
-
 def blog(request):
-    posts = Post.objects.all()   
+    posts = Post.objects.all()
     return render(request, 'blog/blog.html', {'posts': posts})
+
 
 @login_required
 def post_detail(request, slug):
@@ -31,4 +31,3 @@ def post_detail(request, slug):
         form = CommentForm()
 
     return render(request, 'blog/post_detail.html', {'post': post, 'form': form})
-    

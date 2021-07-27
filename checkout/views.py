@@ -33,6 +33,7 @@ def cache_checkout_data(request):
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
 
+
 @login_required(login_url='/accounts/login/')
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -77,7 +78,7 @@ def checkout(request):
                     return redirect(reverse('shopping_bag'))
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', 
+            return redirect(reverse('checkout_success',
                                     args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
@@ -85,7 +86,7 @@ def checkout(request):
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, 
+            messages.error(request,
                           "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
 
@@ -138,7 +139,7 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    
+
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         # Attach the user's profile to the order

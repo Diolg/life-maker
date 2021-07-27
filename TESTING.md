@@ -2,6 +2,14 @@
 
 A lot of testing was carried out, including Google Chrome developer tools, manual testing on desktops, laptops, mobile devices as well as different browsers (more detailed in the “Further Testing section”). The owner’s friends and family were asked to provide the feedback and test the website, what was considered in order to make the website more attractive visually and easier to navigate (more details in the “Known Bugs” section).  
 
+## Code Validation  
+
+[Validator.w3.org](https://validator.w3.org/)- HTML code validation. No major issues found.  
+[Jigsaw.w3.org/css](https://jigsaw.w3.org/)-validator - No errors found.
+[Jshint.com/](https://jshint.com/) - Used for validation of Javascript code. No major issues found.
+[Pep8online.com](http://pep8online.com/) - Used for validating Python code. Tried to fix as many issues as possible throughout the development. The remaining issues are related to the "line too long".
+
+
 # Users story testing  
 
 ## General Users  
@@ -276,22 +284,6 @@ The order total and grand total should match.
 
 - Due to lack of time, did not manage to resolve the following: after the User's order is confirmed onscreen, the User does not get the order confirmation email. The project owner is going to work on this issue in order to fix it.  
 
-
-
-
-
-
-
-
-
-
-
-
-
-# Acknowledgements
-- To my husband and other members of my family as well as friends for helping me in testing the website.
-- To my mentor Medale Oluwafemi for patience and helping me through the process.
-- To tutors (especially, to Igor_CI) and peers from Slack community, for support and prompt reactions during the process.
 
 
 

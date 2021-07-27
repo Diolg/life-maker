@@ -8,7 +8,7 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 
-# Create your views here.
+
 def all_sessions(request):
     """ A view to return all sessions and search queries """
 
@@ -33,7 +33,7 @@ def all_sessions(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-            
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -44,7 +44,7 @@ def all_sessions(request):
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
@@ -69,7 +69,8 @@ def session_detail(request, product_id):
         'product': product,
     }
 
-    return render(request, 'products/session_detail.html', context)  
+    return render(request, 'products/session_detail.html', context)
+
 
 @login_required
 def add_product(request):
@@ -130,7 +131,7 @@ def edit_product(request, product_id):
 def delete_product(request, product_id):
     """ Delete a product from the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you do not have access to these actions.')
+        messages.error(request, 'Sorry, you do not have access.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)

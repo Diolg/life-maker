@@ -345,7 +345,186 @@ They are provided on the pages:
 
 # Testing  
 
-[View testing information here](/TESTING.md)
+[View testing information here](/TESTING.md)  
+
+# Deployment  
+
+## Needed Installation Prerequisites  
+
+The following technologies needed to be in installed in the IDE environment in order to run the project.
+
+- Python3
+- Git
+- pip3  
+
+It is important to be registered in the following platforms:
+
+- Heroku
+- AWS
+- Stripe  
+
+## Cloning on GitHub  
+
+- Login to GitHub.com.
+- Open Diolg/life-maker.
+- Click "Code" then under "Clone" copy the link with the HTTPS URL.
+- Go to the terminal in your IDE environment.
+- Change the working directory to where you want the clone to be saved by typing cd and the name of the directory.
+- Type git clone and paste the copied HTTPS URL.
+- After pressing enter the clone will be saved to your chosen directory.  
+
+## Local Deployment On Gitpod  
+
+- After cloning repository on GitHub go to the chosen IDE environment and open the clone directory.
+- Install the libraries from the requirements.txt, in the terminal type - pip3 install -r requirements.txt.
+- Set your environment variables in your Gitpod settings or in an created env.py file.
+- If setting variables within an env.py file add this file to the created .gitignore file in order not to expose your variables when pushing to gitHub.
+- Your environment variables will need to be set as follows:
+1. os.environ["DEVELOPMENT"] = "True"
+2. os.environ["SECRET_KEY"] = "Your Secret key"
+3. os.environ["STRIPE_PUBLIC_KEY"] = "Your Stripe Public key"
+4. os.environ["STRIPE_SECRET_KEY"] = "Your Stripe Secret key"
+5. os.environ["STRIPE_WH_SECRET"] = "Your Stripe WH_Secret key"
+- Create the database from the models by typing in the terminal python3 manage.py makemigrations. 
+- Followed by python3 manage.py migrate
+- Load the data fixtures by typing in the terminal: python3 manage.py loaddata products
+- Create a superuser so you can log in to the Django admin by typing in the terminal: python3 manage.py createsuperuser (providing email and password)
+- The site can now be run locally by typing in the terminal python3 manage.py runserver.  
+
+
+## Heroku Deployment
+- After logging in to Heroku, select "Create New App" Choose the region closest to you and select "Create app".
+- On the resources tab, to provision the database in the add on field search for and select "Heroku Postgres".
+- A pop up should appear and under "Plan name" use "Hobby Dev-Free" and select "Provision".
+- Go to your IDE and type pip3 install dj_database_url and pip3 install psycopg2-binary as these need to be installed to use Postgres. Also pip install gunicorn for the webserver.
+- To make sure Heroku installs all of the apps when deployed save the requirements by typing in the terminal pip3 freeze > requirements.txt
+- Back on Heroku under settings, select "Reveal config vars" and copy the key from DATABASE_URL.
+- In the project folder on settings.py in the database setting, comment out the current database setting.
+- This should be replaced with:  
+
+DATABASES = {
+    'default': dj_database_url.parse('<Enter the copied DATABASE_URL key here>')
+}  
+
+- Add the data to the postgres database by typing in the terminal python3 manage.py makemigrations. Followed by python3 manage.py migrate
+- Load the data fixtures by typing in the terminal: python3 manage.py loaddata products
+- Create a superuser so you can log in to the Django admin by typing in the terminal: python3 manage.py createsuperuser
+- Return to database setting in settings.py and remove code DATABASES = {
+    'default': dj_database_url.parse('<Enter the copied DATABASE_URL key here>')
+}  
+  and uncomment the previous database setting.
+- Create a Procfile and add web: gunicorn life_maker.wsgi:application
+- Login to Heroku through the cli heroku login -i
+- Temporarily disable collect static by typing heroku config:set DISABLE_COLLECTSTATIC=1
+- Add `life-maker.herokuapp.com, localhost' to ALLOWED_HOSTS in settings.py.
+- The app can now be deployed by typing in the terminal heroku git:remote -a vision-furniture and git push heroku master
+- On Heroku dashboard under "Deploy" set "Deployment method" to connect to Gitub.  
+- Under "Automatic Deplays" set "Enable automatic deploy" so the code is automatically deployed to Heroku and GitHub.  
+
+## Adding Static Files to AWS  
+
+- Go to AWS website, select S3 under services, create a new bucket (it is important to select the close to you region), choose to allow all public access.
+- Go to the new bucket and under properties tab turn on static website hosting.
+- Under permissions tab the CORS configuration tab and enter the following:  
+
+[
+  {
+      "AllowedHeaders": [
+          "Authorization"
+      ],
+      "AllowedMethods": [
+          "GET"
+      ],
+      "AllowedOrigins": [
+          "*"
+      ],
+      "ExposeHeaders": []
+  }
+]  
+
+- Go to the bucket policy tab, select "policy generator" in order to create a security policy for this bucket.
+- It is required to add:  
+
+1. Policy type: S3 bucket policy
+2. Effect: Allow
+3. Principal: *
+4. Action: GetObject
+5. Copy the ARN from the bucket policy tab. And paste it into the ARN box at the bottom.
+6. Click Add statement. Then generate policy.  
+
+- Copy the policy into the bucket policy editor.
+- Add /* onto the end of the resource key. Click Save.
+- Go to access control list tab and set the list objects permission for everyone under the Public Access section.
+- Create a user to access the bucket by selecting IAM from the servies menu.
+- Select "Groups" and select "Create new group". Add in a new group name and click next, next again then "create new group"
+- Create a policy to access the bucket, by selecting "policies" then "create policy".  
+- Select JSON tab and import managed policy. Search for s3 and import "AmazonS3FullAccess".
+- Copy the bucket policy ARN from the bucket policy in s3 > permissions. Paste it into the JSON resource key on create policy twice giving the second paste a /* at the end. Select "review policy". Give the policy a name and description and create the policy.
+- Go to "groups", select the new group, select "attach policy", search for the newly created policy and attach it to the policy.
+- Go to "users", add user, create a user name, give them programmatic access and select next.
+- Add the new user to the group and select next to create user then download the .csv file.
+- Go to your IDE terminal type: pip3 intsall boto3 and pip3 intall django-storages to install the packages to connect to django. Type: pip3 freeze > requirements.txt so they get installed on heroku when its deployed.
+- Add 'storages' to installed apps on the settings.py file. Add the following code to tell Django which bucket to communicate with:  
+
+
+if 'USE_AWS' in os.environ:
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'life-maker'
+    AWS_S3_REGION_NAME = 'eu-north-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY_ID')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'  
+
+- Add the AWS keys on Heroku  from the .csv file to the config vars. 
+- Add USE_AWS: True, so the that the setting file knows to use the AWS configuration when deploying to Heroku
+- Remove the COLLECTSTATIC variable.
+- Push all the changes to Github to provide automatic deployment to Heroku.  
+
+
+# Credits  
+
+## Tutorials  
+
+- The application is mostly based on the Boutique Ado from the Code insitute tutorial project.  
+
+It gave an amazing opportunity to realize how an e-commerce website is built.  
+
+- The tutorials from [Code With Stein](https://www.youtube.com/watch?v=m3hhLE1KR5Q) and [Django Blog App](https://www.askpython.com/django/django-blog-app) helped in building the Blog app.  
+
+## Media  
+
+- The background image as well as Coaches images were taken from [Pexels](https://www.pexels.com/)  
+- All the text content was created by the project owner.
+
+
+# Acknowledgements
+- To my husband and other members of my family as well as friends for helping me in testing the website.
+- To my mentor Medale Oluwafemi for patience and helping me through the process.
+- To tutors (especially, to Igor_CI) and peers from Slack community, for support and prompt reactions during the process.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
